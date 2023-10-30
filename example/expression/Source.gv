@@ -1,0 +1,62 @@
+digraph asm_graph {
+15575942389512868227 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">D</td></tr></table>> ];
+8326665624501359652 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A + @32[A + B + C + A]</td></tr></table>> ];
+3786517639489577093 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">C * A</td></tr></table>> ];
+11215486288878174886 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">B</td></tr></table>> ];
+13982538940398475208 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">@32[A + B + C + A]</td></tr></table>> ];
+18107600485833036809 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">-(C * A / @32[A + B + C + A])</td></tr></table>> ];
+12675148690717488619 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A</td></tr></table>> ];
+5978631258814382641 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">(D?(&#0123;(A + B + -(C * A / @32[A + B + C + A])) &#0124; B 0 32, A + @32[A + B + C + A] 32 64&#0125;,0xF))[0:32]</td></tr></table>> ];
+13686561411465440017 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">D?(&#0123;(A + B + -(C * A / @32[A + B + C + A])) &#0124; B 0 32, A + @32[A + B + C + A] 32 64&#0125;,0xF)</td></tr></table>> ];
+387980098838544499 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A + B + -(C * A / @32[A + B + C + A])</td></tr></table>> ];
+14071914429702457873 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">C * A / @32[A + B + C + A]</td></tr></table>> ];
+14020629154659935957 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">&#0123;(A + B + -(C * A / @32[A + B + C + A])) &#0124; B 0 32, A + @32[A + B + C + A] 32 64&#0125;</td></tr></table>> ];
+4198731659259230900 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">C</td></tr></table>> ];
+16471707408814104567 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A + B</td></tr></table>> ];
+16376303770035797240 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">(A + B + -(C * A / @32[A + B + C + A])) &#0124; B</td></tr></table>> ];
+12311641549933089682 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A + B + C + A</td></tr></table>> ];
+188215527701038837 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">A + B + C</td></tr></table>> ];
+18389447398087242078 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="left">0xF</td></tr></table>> ];
+13686561411465440017 -> 15575942389512868227[];
+16471707408814104567 -> 12675148690717488619[];
+16471707408814104567 -> 11215486288878174886[];
+387980098838544499 -> 16471707408814104567[];
+3786517639489577093 -> 4198731659259230900[];
+3786517639489577093 -> 12675148690717488619[];
+14071914429702457873 -> 3786517639489577093[];
+188215527701038837 -> 16471707408814104567[];
+188215527701038837 -> 4198731659259230900[];
+12311641549933089682 -> 188215527701038837[];
+12311641549933089682 -> 12675148690717488619[];
+13982538940398475208 -> 12311641549933089682[];
+14071914429702457873 -> 13982538940398475208[];
+18107600485833036809 -> 14071914429702457873[];
+387980098838544499 -> 18107600485833036809[];
+16376303770035797240 -> 387980098838544499[];
+16376303770035797240 -> 11215486288878174886[];
+14020629154659935957 -> 16376303770035797240[];
+8326665624501359652 -> 12675148690717488619[];
+8326665624501359652 -> 13982538940398475208[];
+14020629154659935957 -> 8326665624501359652[];
+13686561411465440017 -> 14020629154659935957[];
+13686561411465440017 -> 18389447398087242078[];
+5978631258814382641 -> 13686561411465440017[];
+}

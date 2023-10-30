@@ -1,0 +1,17 @@
+digraph asm_graph {
+0 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_0</td></tr><tr><td align="left"><font color="blue1">CMP        </font><font color="forestgreen">EAX</font>, <font color="azure4">0x10</font></td></tr><tr><td align="left"><font color="blue1">JZ         </font><font color="darkslateblue">loc_c</font></td></tr></table>> ];
+1 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_c</td></tr><tr><td align="left"><font color="blue1">MOV        </font><font color="forestgreen">EAX</font>, <font color="forestgreen">ECX</font></td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_11223344</font></td></tr></table>> ];
+2 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_5</td></tr><tr><td align="left"><font color="blue1">MOV        </font><font color="forestgreen">ESI</font>, <font color="forestgreen">EAX</font></td></tr><tr><td align="left"><font color="blue1">CMOVA      </font><font color="forestgreen">EAX</font>, <font color="forestgreen">EBX</font></td></tr><tr><td align="left"><font color="blue1">JMP        </font><font color="darkslateblue">loc_14</font></td></tr></table>> ];
+4 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_13</td></tr><tr><td align="left"><font color="blue1">INC        </font><font color="forestgreen">EAX</font></td></tr></table>> ];
+5 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_14</td></tr><tr><td align="left"><font color="blue1">RET        </font></td></tr></table>> ];
+0 -> 1[color="limegreen"];
+0 -> 2[color="red"];
+1 -> 4[color="blue"];
+2 -> 5[color="blue"];
+4 -> 5[color="blue"];
+}

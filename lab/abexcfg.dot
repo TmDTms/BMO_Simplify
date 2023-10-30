@@ -1,0 +1,29 @@
+digraph asm_graph {
+0 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401000</td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x402000</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x402012</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_401061</font></td></tr></table>> ];
+2 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401013</td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x402094</font></td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_401055</font></td></tr></table>> ];
+3 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401055</td></tr><tr><td align="left"><font color="blue1">JMP        </font><font color="deeppink4">DWORD</font> PTR [<font color="azure4">0x403050</font>]</td></tr></table>> ];
+4 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_40101d</td></tr><tr><td align="left"><font color="blue1">INC        </font><font color="forestgreen">ESI</font></td></tr><tr><td align="left"><font color="blue1">DEC        </font><font color="forestgreen">EAX</font></td></tr><tr><td align="left"><font color="blue1">JMP        </font><font color="darkslateblue">loc_401021</font></td></tr></table>> ];
+5 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401021</td></tr><tr><td align="left"><font color="blue1">INC        </font><font color="forestgreen">ESI</font></td></tr><tr><td align="left"><font color="blue1">INC        </font><font color="forestgreen">ESI</font></td></tr><tr><td align="left"><font color="blue1">DEC        </font><font color="forestgreen">EAX</font></td></tr><tr><td align="left"><font color="blue1">CMP        </font><font color="forestgreen">EAX</font>, <font color="forestgreen">ESI</font></td></tr><tr><td align="left"><font color="blue1">JZ         </font><font color="darkslateblue">loc_40103d</font></td></tr></table>> ];
+6 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_40103d</td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x40205E</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x402064</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_401061</font></td></tr></table>> ];
+7 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401028</td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x402035</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x40203B</font></td></tr><tr><td align="left"><font color="blue1">PUSH       </font><font color="azure4">0x0</font></td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_401061</font></td></tr></table>> ];
+8 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_40103b</td></tr><tr><td align="left"><font color="blue1">JMP        </font><font color="darkslateblue">loc_401050</font></td></tr></table>> ];
+9 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_401050</td></tr><tr><td align="left"><font color="blue1">CALL       </font><font color="darkslateblue">loc_40105b</font></td></tr></table>> ];
+0 -> 2[color="blue"];
+2 -> 4[color="blue"];
+4 -> 5[color="blue"];
+5 -> 7[color="red"];
+5 -> 6[color="limegreen"];
+7 -> 8[color="blue"];
+6 -> 9[color="blue"];
+8 -> 9[color="blue"];
+9 -> 3[color="blue"];
+}
